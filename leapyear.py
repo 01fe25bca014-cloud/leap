@@ -1,9 +1,11 @@
 import sys
-def leap(year):
-    if (year%4 ==0):
-        print("Is a leap year")
-    else:
-        print("Not a leap year")
 
-        year =int(sys.argv[1])
-        leap(year)
+def leap(year: int) -> str:
+    if year % 4 == 0:
+        return "leap year"
+    else:
+        return "not leap year"
+
+if __name__ == "__main__":
+    year = int(sys.argv[1])
+    print(leap(year))
